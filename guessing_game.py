@@ -43,11 +43,9 @@ def start_game():
                 if ending.lower() == "n":
                     print("Have A Nice Day {}!".format(first_name))
                     sys.exit()
-                    continue
                 if ending.lower() == "no":
                     print("Have A Nice Day {}!".format(first_name))
                     sys.exit()
-                    continue
                 if ending.lower() == "":
                     continue
                 start_game()
