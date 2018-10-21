@@ -10,6 +10,7 @@ def start_game():
     
     first_name = input("What is your name?  ")
     answer = input("Do you want to play the Number Guessing Game? Y/N  ")
+    
     if answer.lower() == "n":
         print("Have A Nice Day {}!".format(first_name))
         sys.exit()
