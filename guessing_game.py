@@ -3,6 +3,11 @@ import sys
 import math
 
 def start_game():
+    user_input = '0'
+    attempt_count = 0
+    score_counter = 0
+    random_number = int(random.randrange(1,100))
+    
     first_name = input("What is your name?  ")
     answer = input("Do you want to play the Number Guessing Game? Y/N  ")
     if answer.lower() == "n":
@@ -15,20 +20,15 @@ def start_game():
         print("Welcome {} to the Number Guessing Game!".format(first_name))
         print("Guess A Number From 1-100!")
 
-random_number = int(random.randrange(1,100))
-user_input = '0'
-    attempt_count = 0
-    score_counter = 0
-    
-    while user_input != random_number:
-        try:
-            user_input = int(input())
-            attempt_count += 1
+while user_input != random_number:
+    try:
+        user_input = int(input())
+        attempt_count += 1
             score_counter += 25
         except ValueError:
             print("Oh no thats not a valid answer! Guess again!")
-        except TypeError:
-            print("Oh no thats not a valid answer! Guess again!")
+    except TypeError:
+        print("Oh no thats not a valid answer! Guess again!")
         else:
             if user_input == random_number:
                 print("Congratulations You Guessed It!")
