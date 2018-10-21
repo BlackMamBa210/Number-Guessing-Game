@@ -27,8 +27,8 @@ while user_input != random_number:
             score_counter += 25
         except ValueError:
             print("Oh no thats not a valid answer! Guess again!")
-    except TypeError:
-        print("Oh no thats not a valid answer! Guess again!")
+        except TypeError:
+            print("Oh no thats not a valid answer! Guess again!")
         else:
             if user_input == random_number:
                 print("Congratulations You Guessed It!")
