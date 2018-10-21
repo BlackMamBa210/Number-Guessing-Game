@@ -25,7 +25,7 @@ while user_input != random_number:
     try:
         user_input = int(input())
         attempt_count += 1
-            score_counter += 25
+        score_counter += 25
         except ValueError:
             print("Oh no thats not a valid answer! Guess again!")
         except TypeError:
