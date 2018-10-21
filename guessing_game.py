@@ -10,7 +10,7 @@ def start_game():
 
     first_name = input("What is your name?  ")
     answer = input("Do you want to play the Number Guessing Game? Y/N  ")
-
+    print(random_number)
     if answer.lower() == "n":
           print("Have A Nice Day {}!".format(first_name))
           sys.exit()
@@ -19,7 +19,7 @@ def start_game():
           sys.exit()   
     else:
         print("\nWelcome {} to the Number Guessing Game!".format(first_name))
-        print("The lower the score the better!")
+        print("\nThe lower the score the better!")
         print("Guess A Number From 1-100!")
 
     while user_input != random_number:
@@ -38,8 +38,6 @@ def start_game():
                 ending = input("Thank You For Playing The Number Guessing Game! Would you like to play again? Y/N  ")
                 attempt_count == score_counter
                 if attempt_count == 0:
-                    print("\nThis is your first time playing the Number Guessing Game. So there is no high score.")
-                else:
                     print("\nCurrent best score is {}!".format(score_counter))
                     attempt_count == score_counter
                 if ending.lower() == "n":
@@ -61,9 +59,6 @@ def start_game():
                 print("It's Higher! Guess Again! Mwahahahaha!")
             elif user_input >= random_number:
                 print("It's Lower! Guess Again! Mwahahahaha!")
-            else:
-                if attempt_count != '1':
-                    print("Congratulations! You Got It On Your First Try!!!")
                 
     user_input == random_number
 
